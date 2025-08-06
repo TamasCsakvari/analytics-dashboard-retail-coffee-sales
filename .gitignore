@@ -1,2 +1,6 @@
 **/*.pyc
 **/_pycache_
+terraform.tfvars
+*.tfstate
+*.tfstate.*
+.terraform*
