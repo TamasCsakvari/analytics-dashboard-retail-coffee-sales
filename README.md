@@ -1,1 +1,106 @@
-# analytics-dashboard-retail-coffee-sales
+# Coffee Vending Machine - Sales Analytics Dashboard
+
+![Project Banner](<docs/dashboard-screenshot.png>) <!-- create this screenshot later -->
+
+## 📊 Project Overview
+
+This project presents a comprehensive sales analytics dashboard for a coffee vending machine business. The goal is to provide key insights into sales performance, product popularity, customer behavior, and peak operational hours.
+
+The entire infrastructure is managed as code using Terraform, and the final interactive report is built with Power BI, making this a complete, end-to-end analytics project demonstration.
+
+---
+
+## ✨ Key Features
+
+- **Interactive Dashboard:** A Power BI report with slicers for dynamic filtering by date, coffee type, and payment method.
+- **Performance KPIs:** At-a-glance metrics for Total Sales, Total Transactions, and Average Transaction Value.
+- **Trend Analysis:** Visualizations for daily sales trends, including a 7-period moving average to identify underlying patterns.
+- **Product & Customer Insights:** Breakdowns of top-selling products, payment method preferences, and hourly sales patterns.
+- **Cloud Infrastructure:** All data is hosted on an Azure SQL Database, provisioned and managed automatically via Terraform.
+- **Infrastructure as Code (IaC):** The entire Azure setup is defined in Terraform configuration files, ensuring repeatability and version control.
+
+---
+
+## 🛠️ Tech Stack & Architecture
+
+- **Data Source:** [Coffee Vending Machine Sales Kaggle Dataset](https://www.kaggle.com/datasets/ihelon/coffee-sales?resource=download)
+- **Data Transformation & Modeling:** Power BI (Power Query & DAX)
+- **Data Warehouse:** Azure SQL Database
+- **Reporting & Visualization:** Power BI Desktop & Power BI Service
+- **Infrastructure as Code:** Terraform
+- **Cloud Platform:** Microsoft Azure
+
+### Architecture Diagram
+![Architecture Diagram](<docs/architecture-diagram.png>) <!-- create this diagram later -->
+
+---
+
+## 🚀 Usage
+
+To run this project locally, you will need the following tools installed:
+
+- [Power BI Desktop](https://powerbi.microsoft.com/en-us/desktop/)
+- [Terraform](https://www.terraform.io/downloads.html)
+- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
+- An active [Azure Subscription](https://azure.microsoft.com/en-us/free/)
+
+### 1. Set Up the Cloud Infrastructure
+
+The Terraform code in the `/terraform` directory will provision the necessary Azure SQL Database.
+
+```bash
+# 1. Navigate to the terraform directory
+cd terraform
+
+# 2. Create a terraform.tfvars file and add your credentials
+# (See terraform/variables.tf for required variables)
+# IMPORTANT: DO NOT commit this file to Git.
+echo 'sql_admin_login = "youradmin"' > terraform.tfvars
+echo 'sql_admin_password = "yourpassword"' >> terraform.tfvars
+
+# 3. Initialize Terraform
+terraform init
+
+# 4. Plan the deployment to see what will be created
+terraform plan
+
+# 5. Apply the plan to create the resources in Azure
+terraform apply
+```
+
+### 2. Upload Data to Azure SQL
+
+Once the database is created, you will need to upload the source CSV data. This can be done using the "Import Flat File" wizard in Azure Data Studio or by using a custom Python script.
+
+*(You will add more detail here after you do it)*
+
+### 3. Configure the Power BI Report
+
+1.  Open the Power BI file: `/powerbi/coffee-vending-sales-dashboard.pbix`.
+2.  Go to **Transform data** -> **Data source settings**.
+3.  Select the data source and click **"Change Source"**.
+4.  Enter the server name for the Azure SQL Database you created with Terraform.
+5.  Enter your database credentials when prompted.
+6.  Click **"Refresh"** to load the data from Azure into the report.
+
+---
+
+### 4. 🗑️ Cleaning Up
+
+To avoid ongoing Azure costs, you can destroy the infrastructure when you are finished.
+
+```bash
+# Navigate to the terraform directory
+cd terraform
+
+# Destroy all resources managed by this configuration
+terraform destroy
+```
+
+
+## 📈 Dashboard & Key Insights
+
+- **Insight 1:** On average, the coffee vending machine generates over 300 Ukrainian hryvnias in revenue per day, equaling around 10 coffee sales.
+- **Insight 2:** "Latte" and "Americano with milk" are the top-selling products, accounting for over 45% of total sales.
+- **Insight 3:** Card payments are used in over 95% of transactions, indicating that the cash payment option is a low-priority feature.
+
