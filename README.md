@@ -8,7 +8,6 @@ This project presents a comprehensive sales analytics dashboard for a coffee ven
 
 The entire infrastructure is managed as code using Terraform, and the final interactive report is built with Power BI, making this a complete, end-to-end analytics project demonstration.
 
----
 
 ## ✨ Key Features
 
@@ -19,7 +18,7 @@ The entire infrastructure is managed as code using Terraform, and the final inte
 - **Cloud Infrastructure:** All data is hosted on an Azure SQL Database, provisioned and managed automatically via Terraform.
 - **Infrastructure as Code (IaC):** The entire Azure setup is defined in Terraform configuration files, ensuring repeatability and version control.
 
----
+
 
 ## 🛠️ Tech Stack & Architecture
 
@@ -33,7 +32,7 @@ The entire infrastructure is managed as code using Terraform, and the final inte
 ### Architecture Diagram
 ![Architecture Diagram](<docs/architecture-diagram.png>) <!-- create this diagram later -->
 
----
+
 
 ## 🚀 Usage
 
@@ -83,7 +82,6 @@ Once the database is created, you will need to upload the source CSV data. This 
 5.  Enter your database credentials when prompted.
 6.  Click **"Refresh"** to load the data from Azure into the report.
 
----
 
 ### 4. 🗑️ Cleaning Up
 
