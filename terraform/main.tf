@@ -1,4 +1,4 @@
-# Configures the required Terraform providers (in this case, only Azure)
+# Configures Azure as the Terraform provider
 terraform {
   required_providers {
     azurerm = {
@@ -8,19 +8,18 @@ terraform {
   }
 }
 
-# Specifies provider-level settings (we are using default settings here)
+# Specifies provider-level settings (leaving default settings here)
 provider "azurerm" {
   features {}
 }
 
-# 1. Creates a Resource Group (a logical container for all our Azure resources)
+# Create a Resource Group (a logical container for all Azure resources)
 resource "azurerm_resource_group" "rg" {
   name     = "rg-${var.project_name}-analytics"
   location = var.location
 }
 
-# 2. Creates the SQL Server
-# Note the name uses the project_name variable to ensure it's unique
+# Create the SQL Server
 resource "azurerm_mssql_server" "sql_server" {
   name                         = "sql-${var.project_name}-server"
   resource_group_name          = azurerm_resource_group.rg.name
@@ -30,15 +29,14 @@ resource "azurerm_mssql_server" "sql_server" {
   administrator_login_password = var.sql_admin_password
 }
 
-# 3. Creates the SQL Database inside the server
+# Create the SQL Database inside the server
 resource "azurerm_mssql_database" "sql_db" {
   name      = "db-${var.project_name}-data"
   server_id = azurerm_mssql_server.sql_server.id
   sku_name  = "S0" # This is a basic, low-cost tier perfect for this project ($15/month)
 }
 
-# 4. CRITICAL: Creates a firewall rule to allow YOUR computer to access the database
-# By default, the database is locked down. This rule finds your public IP and adds it.
+# Create a firewall rule to allow only your computer to access the database
 resource "azurerm_mssql_firewall_rule" "my_ip_rule" {
   name             = "AllowMyIP"
   server_id        = azurerm_mssql_server.sql_server.id
@@ -46,7 +44,7 @@ resource "azurerm_mssql_firewall_rule" "my_ip_rule" {
   end_ip_address   = chomp(data.http.my_ip.response_body)
 }
 
-# Helper to get your current public IP address
+# Helper function to get your current public IP address
 data "http" "my_ip" {
   url = "http://ifconfig.me"
 }
