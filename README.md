@@ -9,6 +9,14 @@ This project presents a comprehensive sales analytics dashboard for a coffee ven
 The entire infrastructure is managed as code using Terraform, and the final interactive report is built with Power BI, making this a complete, end-to-end analytics project demonstration.
 
 
+## 📈 Dashboard & Key Insights
+
+- **Insight 1:** On average, the coffee vending machine generates over 300 Ukrainian hryvnias in revenue per day, equaling around 10 coffee sales.
+- **Insight 2:** "Latte" and "Americano with milk" are the top-selling products, accounting for over 45% of total sales.
+- **Insight 3:** Card payments are used in over 95% of transactions, indicating that the cash payment option is a low-priority feature.
+
+
+
 ## ✨ Key Features
 
 - **Interactive Dashboard:** A Power BI report with slicers for dynamic filtering by date, coffee type, and payment method.
@@ -83,7 +91,7 @@ Once the database is created, you will need to upload the source CSV data. This 
 6.  Click **"Refresh"** to load the data from Azure into the report.
 
 
-### 4. 🗑️ Cleaning Up
+### 4. Cleaning Up
 
 To avoid ongoing Azure costs, you can destroy the infrastructure when you are finished.
 
@@ -96,9 +104,5 @@ terraform destroy
 ```
 
 
-## 📈 Dashboard & Key Insights
 
-- **Insight 1:** On average, the coffee vending machine generates over 300 Ukrainian hryvnias in revenue per day, equaling around 10 coffee sales.
-- **Insight 2:** "Latte" and "Americano with milk" are the top-selling products, accounting for over 45% of total sales.
-- **Insight 3:** Card payments are used in over 95% of transactions, indicating that the cash payment option is a low-priority feature.
 

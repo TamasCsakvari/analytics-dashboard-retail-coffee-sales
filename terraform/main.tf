@@ -46,5 +46,5 @@ resource "azurerm_mssql_firewall_rule" "my_ip_rule" {
 
 # Helper function to get your current public IP address
 data "http" "my_ip" {
-  url = "http://ifconfig.me"
+  url = "https://icanhazip.com"
 }
