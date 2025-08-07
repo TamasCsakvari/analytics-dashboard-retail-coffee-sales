@@ -7,7 +7,7 @@ variable "project_name" {
 variable "location" {
   description = "The Azure region to deploy the resources in."
   type        = string
-  default     = "West Europe"
+  default     = "East US"
 }
 
 variable "sql_admin_login" {
