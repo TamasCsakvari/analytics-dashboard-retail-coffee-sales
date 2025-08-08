@@ -1,6 +1,6 @@
 # Coffee Vending Machine - Sales Analytics Dashboard
 
-![Project Banner](<docs/dashboard-screenshot.png>) <!-- create this screenshot later -->
+![Project Banner](docs/coffee-sales-dashboard.pdf) <!-- create this screenshot later -->
 
 ## 📊 Project Overview
 
