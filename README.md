@@ -11,7 +11,7 @@ This project presents a comprehensive sales analytics dashboard for a coffee ven
 - Card payments are used in over **95% of transactions**, indicating that the cash payment option is a low-priority feature.
 
 
-## 🛠️ Tech Stack & Architecture
+## 🛠️ Tech Stack
 
 ![Tech Stack](docs/techstack.png)
 
@@ -30,6 +30,7 @@ To run this project locally, you will need the following tools installed:
 - [Terraform](https://www.terraform.io/downloads.html)
 - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
 - An active [Azure Subscription](https://azure.microsoft.com/en-us/free/)
+- [Azure Data Studio](https://learn.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver16)
 
 ### 1. Set Up the Cloud Infrastructure
 
