@@ -32,7 +32,14 @@ To run this project locally, you will need the following tools installed:
 - An active [Azure Subscription](https://azure.microsoft.com/en-us/free/)
 - [Azure Data Studio](https://learn.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver16)
 
-### 1. Set Up the Cloud Infrastructure
+### View the interactive dashboard
+
+Open the Power BI file: `/powerbi/coffee-vending-sales-dashboard.pbix` in Power BI Desktop.
+
+### Setting up the project
+
+
+#### 1. Set Up the Cloud Infrastructure
 
 The Terraform code in the `/terraform` directory will provision the necessary Azure SQL Database.
 
@@ -56,11 +63,11 @@ terraform plan
 terraform apply
 ```
 
-### 2. Upload Data to Azure SQL
+#### 2. Upload Data to Azure SQL
 
 Once the database is created, you will need to upload the source CSV data. This can be done using the "[Import Flat File](https://learn.microsoft.com/en-us/azure-data-studio/extensions/sql-server-import-extension)" wizard in Azure Data Studio.
 
-### 3. Configure the Power BI Report
+#### 3. Configure the Power BI Report
 
 1.  Open the Power BI file: `/powerbi/coffee-vending-sales-dashboard.pbix`.
 2.  Go to **Transform data** -> **Advanced Editor**.
@@ -69,7 +76,7 @@ Once the database is created, you will need to upload the source CSV data. This 
 5.  Click **"Refresh"** to load the data from Azure into the report.
 
 
-### 4. Cleaning Up
+#### 4. Cleaning Up
 
 To avoid ongoing Azure costs, you can destroy the infrastructure when you are finished.
 
