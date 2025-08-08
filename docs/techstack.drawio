@@ -1,0 +1,25 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0" version="28.0.7">
+  <diagram name="Azure-PowerBI-Workflow" id="lr_hY93FmBLdxKuS9Ip2">
+    <mxGraphModel dx="137" dy="692" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="kXrXaMHdfC5q1Md2UKXQ-11" value="💻 Terraform Code (.tf files)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="860" y="310" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kXrXaMHdfC5q1Md2UKXQ-12" value="🗄 Azure SQL Database" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="310" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kXrXaMHdfC5q1Md2UKXQ-13" value="&lt;div&gt;📊 Power BI Desktop&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;Power Query (M): Transform, clean data&lt;br&gt;DAX: Calculate metrics&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffffff;fontSize=15;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="1660" y="310" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kXrXaMHdfC5q1Md2UKXQ-14" value="Provisions &amp;amp; Manages" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontSize=15;strokeWidth=3;" edge="1" parent="1" source="kXrXaMHdfC5q1Md2UKXQ-11" target="kXrXaMHdfC5q1Md2UKXQ-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kXrXaMHdfC5q1Md2UKXQ-15" value="Imports &amp;amp; Models Data" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;fontSize=15;strokeWidth=3;" edge="1" parent="1" source="kXrXaMHdfC5q1Md2UKXQ-12" target="kXrXaMHdfC5q1Md2UKXQ-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

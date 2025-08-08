@@ -1,34 +1,19 @@
 # Coffee Vending Machine - Sales Analytics Dashboard
 
-![Project Banner](docs/coffee-sales-dashboard.pdf) <!-- create this screenshot later -->
-
-## 📊 Project Overview
+![Project Banner](docs/coffee-sales-dashboard.png) <!-- create this screenshot later -->
 
 This project presents a comprehensive sales analytics dashboard for a coffee vending machine business. The goal is to provide key insights into sales performance, product popularity, customer behavior, and peak operational hours.
 
-The entire infrastructure is managed as code using Terraform, and the final interactive report is built with Power BI, making this a complete, end-to-end analytics project demonstration.
+## 📊 Insights
 
-
-## 📈 Dashboard & Key Insights
-
-- **Insight 1:** On average, the coffee vending machine generates over 300 Ukrainian hryvnias in revenue per day, equaling around 10 coffee sales.
-- **Insight 2:** "Latte" and "Americano with milk" are the top-selling products, accounting for over 45% of total sales.
-- **Insight 3:** Card payments are used in over 95% of transactions, indicating that the cash payment option is a low-priority feature.
-
-
-
-## ✨ Key Features
-
-- **Interactive Dashboard:** A Power BI report with slicers for dynamic filtering by date, coffee type, and payment method.
-- **Performance KPIs:** At-a-glance metrics for Total Sales, Total Transactions, and Average Transaction Value.
-- **Trend Analysis:** Visualizations for daily sales trends, including a 7-period moving average to identify underlying patterns.
-- **Product & Customer Insights:** Breakdowns of top-selling products, payment method preferences, and hourly sales patterns.
-- **Cloud Infrastructure:** All data is hosted on an Azure SQL Database, provisioned and managed automatically via Terraform.
-- **Infrastructure as Code (IaC):** The entire Azure setup is defined in Terraform configuration files, ensuring repeatability and version control.
-
+- On average, the coffee vending machine generates over 300 Ukrainian hryvnias in revenue per day, equaling around 10 coffee sales.
+- "Latte" and "Americano with milk" are the top-selling products, accounting for over 45% of total sales.
+- Card payments are used in over 95% of transactions, indicating that the cash payment option is a low-priority feature.
 
 
 ## 🛠️ Tech Stack & Architecture
+
+![Tech Stack](docs/tech-stack.png)
 
 - **Data Source:** [Coffee Vending Machine Sales Kaggle Dataset](https://www.kaggle.com/datasets/ihelon/coffee-sales?resource=download)
 - **Data Transformation & Modeling:** Power BI (Power Query & DAX)
@@ -36,11 +21,6 @@ The entire infrastructure is managed as code using Terraform, and the final inte
 - **Reporting & Visualization:** Power BI Desktop & Power BI Service
 - **Infrastructure as Code:** Terraform
 - **Cloud Platform:** Microsoft Azure
-
-### Architecture Diagram
-![Architecture Diagram](<docs/architecture-diagram.png>) <!-- create this diagram later -->
-
-
 
 ## 🚀 Usage
 
