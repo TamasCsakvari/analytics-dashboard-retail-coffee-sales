@@ -6,14 +6,14 @@ This project presents a comprehensive sales analytics dashboard for a coffee ven
 
 ## 📊 Insights
 
-- On average, the coffee vending machine generates over 300 Ukrainian hryvnias in revenue per day, equaling around 10 coffee sales.
-- "Latte" and "Americano with milk" are the top-selling products, accounting for over 45% of total sales.
-- Card payments are used in over 95% of transactions, indicating that the cash payment option is a low-priority feature.
+- On average, the coffee vending machine generates over **300 Ukrainian hryvnias in revenue per day**, equaling around 10 coffee sales.
+- **"Latte"** and **"Americano with milk"** are the top-selling products, accounting for over **45% of total sales**.
+- Card payments are used in over **95% of transactions**, indicating that the cash payment option is a low-priority feature.
 
 
 ## 🛠️ Tech Stack & Architecture
 
-![Tech Stack](docs/tech-stack.png)
+![Tech Stack](docs/techstack.png)
 
 - **Data Source:** [Coffee Vending Machine Sales Kaggle Dataset](https://www.kaggle.com/datasets/ihelon/coffee-sales?resource=download)
 - **Data Transformation & Modeling:** Power BI (Power Query & DAX)
@@ -57,18 +57,15 @@ terraform apply
 
 ### 2. Upload Data to Azure SQL
 
-Once the database is created, you will need to upload the source CSV data. This can be done using the "Import Flat File" wizard in Azure Data Studio or by using a custom Python script.
-
-*(You will add more detail here after you do it)*
+Once the database is created, you will need to upload the source CSV data. This can be done using the "[Import Flat File](https://learn.microsoft.com/en-us/azure-data-studio/extensions/sql-server-import-extension)" wizard in Azure Data Studio.
 
 ### 3. Configure the Power BI Report
 
 1.  Open the Power BI file: `/powerbi/coffee-vending-sales-dashboard.pbix`.
-2.  Go to **Transform data** -> **Data source settings**.
-3.  Select the data source and click **"Change Source"**.
-4.  Enter the server name for the Azure SQL Database you created with Terraform.
-5.  Enter your database credentials when prompted.
-6.  Click **"Refresh"** to load the data from Azure into the report.
+2.  Go to **Transform data** -> **Advanced Editor**.
+3.  Change the data source to the Azure SQL Database you created with Terraform.
+4.  Enter your database credentials when prompted.
+5.  Click **"Refresh"** to load the data from Azure into the report.
 
 
 ### 4. Cleaning Up
@@ -82,7 +79,3 @@ cd terraform
 # Destroy all resources managed by this configuration
 terraform destroy
 ```
-
-
-
-
