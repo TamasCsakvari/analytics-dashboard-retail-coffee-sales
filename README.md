@@ -2,7 +2,7 @@
 
 ![Project Banner](docs/coffee-sales-dashboard.png) <!-- create this screenshot later -->
 
-This project presents a comprehensive sales analytics dashboard for a coffee vending machine business. The goal is to provide key insights into sales performance, product popularity, customer behavior, and peak operational hours.
+This project delivers a comprehensive sales analytics dashboard for a coffee vending machine business, providing actionable insights into sales performance, product popularity, customer purchasing behavior, and peak operational hours. Built with Power BI (Power Query for ETL, DAX for calculations) and connected to an Azure SQL Database provisioned via Terraform Infrastructure as Code, the solution integrates a Kaggle coffee sales dataset into an interactive, cloud-hosted reporting environment. The architecture features automated Azure resource provisioning, secure firewall configurations, and direct SQL connections for real-time data refresh. 
 
 ## 📊 Insights
 
